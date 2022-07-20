@@ -4,8 +4,8 @@
   "description": "React Component for naver maps v3 module.",
   "main": "dist/react-naver-maps.cjs.js",
   "module": "dist/react-naver-maps.esm.js",
-  "repository": "https://github.com/zeakd/react-naver-maps",
-  "author": "zeakd <artydeveloperduck@gmail.com>",
+  "repository": "https://github.com/deer-develop/react-naver-maps",
+  "author": "deer-develop",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
