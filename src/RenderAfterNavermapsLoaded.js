@@ -25,7 +25,7 @@ class RenderAfterNavermapsLoaded extends React.Component {
   }
 
   componentDidMount() {
-    const { clientId, ncpClientId, submodules } = this.props;
+    const { clientId, ncpClientId, submodules, onLoad } = this.props;
 
     loadNavermapsScript({
       clientId,
@@ -33,6 +33,7 @@ class RenderAfterNavermapsLoaded extends React.Component {
       submodules,
     })
       .then(() => {
+        if (onLoad) onLoad();
         this.setState({
           loading: false,
         });
@@ -60,6 +61,7 @@ RenderAfterNavermapsLoaded.propTypes = {
   ncpClientId: cliendIdRequired,
   submodules: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.node,
+  onLoad: PropTypes.func,
 };
 
 RenderAfterNavermapsLoaded.defaultProps = {
