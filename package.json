@@ -11,6 +11,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepublishOnly": "trash dist && npm run build",
+    "prepare": "trash dist && npm run build",
     "examples": "parcel examples/index.html",
     "styleguidist": "styleguidist server",
     "prestyleguidist:build": "npm run build",
